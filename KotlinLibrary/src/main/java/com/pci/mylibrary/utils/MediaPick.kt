@@ -16,11 +16,6 @@ class MediaPick(activity: AppCompatActivity) {
         call(it)
     }
 
-//    private var callBack:PickCallBack? = null
-//    fun  pick(type:String,callBack:PickCallBack){
-//        this.callBack = callBack
-//        pick.launch(type)
-//    }
 
     private lateinit var call:(Uri)->Unit
     fun  pick2(type:String,call:(Uri)->Unit){
@@ -28,8 +23,3 @@ class MediaPick(activity: AppCompatActivity) {
         pick.launch(type)
     }
 }
-//interface PickCallBack{
-//    fun result(uri: Uri) {
-//
-//    }
-//}

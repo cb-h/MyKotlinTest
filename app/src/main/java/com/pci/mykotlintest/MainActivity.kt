@@ -1,11 +1,30 @@
 package com.pci.mykotlintest
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+import android.Manifest
+import android.util.Log
+import com.pci.mykotlintest.databinding.ActivityMainBinding
+import com.pci.mylibrary.BaseLibraryActivity
+
+class MainActivity : BaseLibraryActivity<ActivityMainBinding>() {
+
+
+    override fun onCreateV() {
+
+        bind.hello.setOnClickListener {
+            PermissionUtils(this).request(object :PermissionUtils.PermissionListener{
+                override fun allGranted(list: List<String>) {
+                    Log.e("tag","allGranted${list.toString()}")
+                }
+
+                override fun denied(list: List<String>) {
+                    Log.e("tag","denied${list.toString()}")
+                }
+
+                override fun explained(list: List<String>) {
+                    Log.e("tag","explained${list.toString()}")
+                }
+            },Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.CAMERA)
+        }
     }
 }
