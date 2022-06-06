@@ -20,7 +20,7 @@ class PermissionUtils {
     constructor(fragment: Fragment) {
         permissionFragment = initFragment(fragment.requireActivity())
     }
-    fun initFragment(activity: FragmentActivity):PermissionFragment{
+    private fun initFragment(activity: FragmentActivity):PermissionFragment{
         var fragment :Fragment?= activity.supportFragmentManager.findFragmentByTag(TAG)
         if (null==fragment){
             fragment = PermissionFragment()
