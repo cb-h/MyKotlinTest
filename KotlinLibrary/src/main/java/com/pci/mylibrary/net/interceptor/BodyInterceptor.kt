@@ -17,7 +17,7 @@ class BodyInterceptor:Interceptor {
         val build = request.newBuilder()
         Log.e(TAG,"--Start--")
         build.addHeader("123","123")
-        val method = request.method()
+        val method = request.method
         if (method=="GET"){
 
         }

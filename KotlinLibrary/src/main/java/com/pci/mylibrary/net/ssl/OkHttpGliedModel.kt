@@ -17,7 +17,8 @@ class OkHttpGliedModel :LibraryGlideModule() {
 
 
     override fun registerComponents(context: Context, glide: Glide, registry: Registry) {
-        val client = OkHttpClient().newBuilder().sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
+        val client = OkHttpClient().newBuilder()
+//            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
             .hostnameVerifier(SSLSocketClient.getHostnameVerifier())
             .build()
         registry.replace(GlideUrl::class.java,InputStream::class.java,OkHttpUrlLoader.Factory(client))

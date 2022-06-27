@@ -43,12 +43,12 @@ class OkHttpStreamFetcher(var client:Call.Factory,var url: GlideUrl) :DataFetche
             }
 
             override fun onResponse(call: Call, response: Response) {
-                responseBody = response.body()
+                responseBody = response.body
                 if (response.isSuccessful){
                     stream = ContentLengthInputStream.obtain(responseBody!!.byteStream(),responseBody!!.contentLength())
                     callback.onDataReady(stream)
                 }else{
-                    callback.onLoadFailed(HttpException(response.message(),response.code()))
+                    callback.onLoadFailed(HttpException(response.message,response.code))
                 }
             }
 

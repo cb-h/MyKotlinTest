@@ -19,7 +19,7 @@ object OkHttpClientManager {
             .addNetworkInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(15,TimeUnit.SECONDS)
             .readTimeout(15,TimeUnit.SECONDS)
-            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
+//            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
             .hostnameVerifier(SSLSocketClient.getHostnameVerifier())
             .build()
     }

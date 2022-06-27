@@ -55,13 +55,13 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
 
     //retrofit 相关
-    api 'com.squareup.retrofit2:retrofit:2.3.0'
-    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api 'com.squareup.retrofit2:retrofit:2.7.1'
+    api 'com.squareup.retrofit2:converter-gson:2.7.1'
     //okhttp3
-    api 'com.squareup.okhttp3:okhttp:3.10.0'
+    api 'com.squareup.okhttp3:okhttp:4.9.0'
     api 'com.squareup.okio:okio:1.14.0'
     api 'com.google.code.gson:gson:2.8.5'
-    api 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 
     //自动无限循环banner
 //    api 'cn.bingoogolapple:bga-banner:2.2.7'
