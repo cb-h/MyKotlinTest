@@ -1,4 +1,4 @@
-package com.pci.mylibrary.inline
+package com.pci.mylibrary.utils
 
 import android.content.Context
 import android.content.res.AssetManager
@@ -9,7 +9,10 @@ import java.io.InputStreamReader
  * 作用：
  */
 
-inline fun AssetManager.toString(context: Context, string: String):String {
+fun AssetManager.toString(context: Context, string: String):String {
     val input = context.assets.open(string)
     return InputStreamReader(input).readText()
 }
+
+val Any.TAG:String
+    get() = this::class.java.name

@@ -24,7 +24,7 @@ import java.lang.reflect.ParameterizedType
  */
 open class BaseLibraryActivity<T:ViewBinding> :AppCompatActivity(),CoroutineScope by CoroutineScope(Dispatchers.IO) {
 
-    val TAG = this.javaClass.name
+//    val TAG = this.javaClass.name
     lateinit var bind:T
 
     /**
